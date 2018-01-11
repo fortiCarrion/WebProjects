@@ -1,0 +1,297 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"da",
+				"data-toggle"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"co",
+				"container"
+			],
+			[
+				"h",
+				"http-equiv\tAttr"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"ti",
+				"title\tTag"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"input",
+				"input\tTag"
+			],
+			[
+				"boot",
+				"bootstrap"
+			],
+			[
+				"animatio",
+				"animation-duration"
+			],
+			[
+				"anime",
+				"animation-name"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"backgo",
+				"background"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"a",
+				"autofocus\tAttr"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"min",
+				"min\tAttr"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"id",
+				"id\tAttr"
+			],
+			[
+				"hea",
+				"header\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 150.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/jairc/Documents/Cursos/Udemy/projeto-inicial-spotify/index.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Projeto/tabs.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Projeto/tooltip.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Projeto/alert.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Projeto/navegacao.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/ProjetoBootstrap/imagens.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Projeto/modal.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Projeto/icones.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/ProjetoBootstrap/modal.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/ProjetoBootstrap/icones.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/ProjetoBootstrap/navegacao.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Projeto/index.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/bootstrap/index.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/ProjetoBootstrap/index.html",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/431960/1151911356/mycss/player.css",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/431960/1151911356/project.json",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/431960/1151911356/index.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Bootstrap Inicial/botoes.html",
+		"/C/Program Files (x86)/Steam/steamapps/workshop/content/431960/844808944/project.json",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Bootstrap Inicial/tabela.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Bootstrap Inicial/formulario.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/bootstrap/estilo.css",
+		"/C/Users/jairc/Documents/Cursos/Udemy/bootstrap/formulario.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/bootstrap/bootstrap4/css/bootstrap.min.css.map",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Css3/sombras.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Css3/animacao.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Css3/css/estilo.css",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Css3/normalize.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Css3/border-box-radius.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Css3/degrade-transparencia.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Css3/css/normalize.css",
+		"/C/Users/jairc/Documents/Cursos/Udemy/Css3/css/degrade-transparencia.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/HTML/html5.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/HTML/novas-tags-input.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/HTML/atributos-data-customizado.html",
+		"/C/Users/jairc/Documents/Cursos/Udemy/HTML/js/html5shiv.js",
+		"/C/Users/jairc/Documents/Cursos/Udemy/HTML/table.html"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 165.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
