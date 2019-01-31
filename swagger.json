@@ -1,0 +1,1668 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Este exemplo serve de escopo para a criação das API para o extrator do Agroview. No final do documento temos as models(tabelas) a serem mapeadas com seus rescpectivos campos e retornadas em suas devidas URL.",
+    "version": "1.0.0",
+    "title": "Extrator Comercial Agroview",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "brid@bridsolucoes.com.br"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "*",
+  "basePath": "/agroview",
+  "tags": [
+    {
+      "name": "Municipio",
+      "description": "Cadastro de Municipio"
+    },
+    {
+      "name": "Filial",
+      "description": "Cadastro de Filial"
+    },
+    {
+      "name": "Produto",
+      "description": "Cadastro de Produto"
+    },
+    {
+      "name": "Safra",
+      "description": "Cadastro de Safra"
+    },
+    {
+      "name": "Cultura",
+      "description": "Cadastro da Cultura"
+    },
+    {
+      "name": "Cliente",
+      "description": "Cadastro de Cliente"
+    },
+    {
+      "name": "Vendedor",
+      "description": "Cadastro de Vendedor"
+    },
+    {
+      "name": "Gerente",
+      "description": "Cadastro de Gerente"
+    },
+    {
+      "name": "Operacao",
+      "description": "Operações de Movimentação"
+    },
+    {
+      "name": "Compras",
+      "description": "Movimentação de Entrada"
+    },
+    {
+      "name": "Pedido",
+      "description": "Pedidos"
+    },
+    {
+      "name": "Faturamento",
+      "description": "Movimentação de Saida"
+    },
+    {
+      "name": "ContaReceber",
+      "description": "Contas Receber"
+    },
+    {
+      "name": "Estoque",
+      "description": "Posição de Estoque"
+    },
+    {
+      "name": "Lote",
+      "description": "Lote"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/municipio": {
+      "get": {
+        "tags": [
+          "Municipio"
+        ],
+        "summary": "Retorna todos os Municípios.",
+        "description": "Retorna os dados cadastrais dos Municípios.",
+        "operationId": "getMunicipios",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Municipio"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/filiais": {
+      "get": {
+        "tags": [
+          "Filial"
+        ],
+        "summary": "Retorna todas as filiais.",
+        "description": "Retorna os dados cadastrais das Filiais.",
+        "operationId": "getFiliais",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Filial"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/produtos": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Retorna todos os produtos.",
+        "description": "Retorna os dados cadastrais dos Produtos.",
+        "operationId": "getProdutos",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Produto"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/produtos/fabricantes": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Retorna os fabricante dos produtos.",
+        "description": "Retorna os dados cadastrais de fabricantes dos Produtos.",
+        "operationId": "getFabricantes",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Fabricante"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/produtos/grupos": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Retorna o grupo dos produtos.",
+        "description": "Retorna os dados cadastrais de grupo dos Produtos.",
+        "operationId": "getGrupo",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Grupo"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/produtos/subgrupos": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Retorna as subgrupos dos produtos.",
+        "description": "Retorna os dados cadastrais da subgrupos dos Produtos.",
+        "operationId": "getSubgrupos",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Subgrupo"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/produtos/familias": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Retorna as familias dos produtos.",
+        "description": "Retorna os dados cadastrais da familia dos Produtos.",
+        "operationId": "getFamilia",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Familia"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/produtos/tipos": {
+      "get": {
+        "tags": [
+          "Produto"
+        ],
+        "summary": "Retorna os tipos dos produtos.",
+        "description": "Retorna os dados cadastrais de tipos dos Produtos.",
+        "operationId": "getTipos",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/TipoProduto"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/safras": {
+      "get": {
+        "tags": [
+          "Safra"
+        ],
+        "summary": "Retorna as Safras.",
+        "description": "Retorna os dados cadastrais das Safras.",
+        "operationId": "getSafras",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Safra"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/culturas": {
+      "get": {
+        "tags": [
+          "Cultura"
+        ],
+        "summary": "Retorna as Culturas.",
+        "description": "Retorna os dados cadastrais das Culturas.",
+        "operationId": "getCulturas",
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Cultura"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/clientes": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "summary": "Retorna os clientes",
+        "description": "Retorna todos os clientes da tabela de cadastro.",
+        "operationId": "getCliente",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Cliente"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/clientes/categorias": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "summary": "Retorna categoria do cliente",
+        "description": "Retorna todas as categorias do cliente cadastradas da tabela de categoria do cliente.",
+        "operationId": "getClienteCategoria",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CategoriaCliente"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/clientes/pricipais": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "summary": "Retorna os clientes principais/pais.",
+        "description": "Retorna todos os clientes principais/pais.",
+        "operationId": "getClientePrincipal",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ClientePrincipal"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/clientes/areas": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "summary": "Retorna a área plantada.",
+        "description": "Retorna a área plantada dos clientes.",
+        "operationId": "getClienteArea",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ClienteArea"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/vendedores": {
+      "get": {
+        "tags": [
+          "Vendedor"
+        ],
+        "summary": "Retorna os Vendedores",
+        "description": "Retorna todos os vendedores cadastrados.",
+        "operationId": "getVendedor",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Vendedor"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/gerente": {
+      "get": {
+        "tags": [
+          "Gerente"
+        ],
+        "summary": "Retorna os Gerentes",
+        "description": "Retorna todos os gerentes cadastrados.",
+        "operationId": "getGerente",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Gerente"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/operacoes": {
+      "get": {
+        "tags": [
+          "Operacao"
+        ],
+        "summary": "Retorna as Operações",
+        "description": "Retorna todos os gerentes cadastrados.",
+        "operationId": "getOperacoes",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Operacao"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          }
+        }
+      }
+    },
+    "/compras/FilialCodigo=\"\"&AnoMes=\"\"": {
+      "get": {
+        "tags": [
+          "Compras"
+        ],
+        "summary": "Movimentações de entrada.",
+        "description": "Retorna todas as movimentações de entrada, como a tabela pode ser grande não conseguimos estrair em apenas uma requisição, precisando então informar a filial e data de emissão para abstrair os dados",
+        "operationId": "getCompras",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "FilialCodigo",
+            "in": "path",
+            "description": "Código da Filial",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "AnoMes",
+            "in": "path",
+            "description": "Ano e Mês referente a data de emissão da NF, exemplo: 201901 (01/01/2019 até 31/01/2019), traz as notas contidas entre esse período.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Compras"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      }
+    },
+    "/pedido/FilialCodigo=\"\"&AnoMes=\"\"": {
+      "get": {
+        "tags": [
+          "Pedido"
+        ],
+        "summary": "Pedidos.",
+        "description": "Retorna todos os pedidos, como a tabela pode ser grande não conseguimos estrair em apenas uma requisição, precisando então informar a filial e data de emissão para abstrair os dados",
+        "operationId": "getPedidos",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "FilialCodigo",
+            "in": "path",
+            "description": "Código da Filial",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "AnoMes",
+            "in": "path",
+            "description": "Ano e Mês referente a data de emissão da NF, exemplo: 201901 (01/01/2019 até 31/01/2019), traz as notas contidas entre esse período.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Pedido"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      }
+    },
+    "/faturamento/FilialCodigo=\"\"&AnoMes=\"\"": {
+      "get": {
+        "tags": [
+          "Faturamento"
+        ],
+        "summary": "Movimentações de saída.",
+        "description": "Retorna todas as movimentações de saída, como a tabela pode ser grande não conseguimos estrair em apenas uma requisição, precisando então informar a filial e data de emissão para abstrair os dados",
+        "operationId": "getFaturamento",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "FilialCodigo",
+            "in": "path",
+            "description": "Código da Filial",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "AnoMes",
+            "in": "path",
+            "description": "Ano e Mês referente a data de emissão da NF, exemplo: 201901 (01/01/2019 até 31/01/2019), traz as notas contidas entre esse período.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Faturamento"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      }
+    },
+    "/contaReceber/FilialCodigo=\"\"&AnoMes=\"\"": {
+      "get": {
+        "tags": [
+          "ContaReceber"
+        ],
+        "summary": "Contas Receber.",
+        "description": "Retorna todas as Contas a Receber, como a tabela pode ser grande não conseguimos estrair em apenas uma requisição, precisando então informar a filial e data de emissão para abstrair os dados",
+        "operationId": "getContaReceber",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "FilialCodigo",
+            "in": "path",
+            "description": "Código da Filial",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "AnoMes",
+            "in": "path",
+            "description": "Ano e Mês referente a data de emissão da NF, exemplo: 201901 (01/01/2019 até 31/01/2019), traz as notas contidas entre esse período.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ContaReceber"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      }
+    },
+    "/estoque/FilialCodigo=\"\"&AnoMes=\"\"": {
+      "get": {
+        "tags": [
+          "Estoque"
+        ],
+        "summary": "Posição de Estoque.",
+        "description": "Retorna o saldo de posição de estoque mensal do produto, como a tabela pode ser grande não conseguimos estrair em apenas uma requisição, precisando então informar a filial e data de emissão para abstrair os dados.",
+        "operationId": "getEstoque",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "FilialCodigo",
+            "in": "path",
+            "description": "Código da Filial",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "AnoMes",
+            "in": "path",
+            "description": "Ano e Mês referente a data de emissão da NF, exemplo: 201901 (01/01/2019 até 31/01/2019), traz as notas contidas entre esse período.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Estoque"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      }
+    },
+    "/lote/FilialCodigo=\"\"&AnoMes=\"\"": {
+      "get": {
+        "tags": [
+          "Lote"
+        ],
+        "summary": "Lote.",
+        "description": "Retorna o lote, precisando então informar a filial e data de emissão para abstrair os dados.",
+        "operationId": "getLote",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "FilialCodigo",
+            "in": "path",
+            "description": "Código da Filial",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "AnoMes",
+            "in": "path",
+            "description": "Ano e Mês referente a data de emissão da NF, exemplo: 201901 (01/01/2019 até 31/01/2019), traz as notas contidas entre esse período.",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucesso",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Lote"
+              }
+            }
+          },
+          "401": {
+            "description": "Não autorizado"
+          },
+          "404": {
+            "description": "Não encontrado"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Municipio": {
+      "type": "object",
+      "properties": {
+        "MunicipioCodigo": {
+          "type": "integer"
+        },
+        "MunicipioDescricao": {
+          "type": "string"
+        },
+        "MunicipioCodigoIBGE": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Municipio"
+      }
+    },
+    "Filial": {
+      "type": "object",
+      "properties": {
+        "FilialCodigo": {
+          "type": "integer"
+        },
+        "FilialDescricao": {
+          "type": "string"
+        },
+        "FilialCNPJ": {
+          "type": "string"
+        },
+        "FilialEmail": {
+          "type": "string"
+        },
+        "FilialTelefone": {
+          "type": "string"
+        },
+        "FilialEndereco": {
+          "type": "string"
+        },
+        "FilialEnderecoNumero": {
+          "type": "string"
+        },
+        "FilialEnderecoBairro": {
+          "type": "string"
+        },
+        "FilialEnderecoCEP": {
+          "type": "string"
+        },
+        "FilialEnderecoComplemento": {
+          "type": "string"
+        },
+        "FilialEnderecoMunicipioIBGE": {
+          "type": "string"
+        },
+        "FilialEnderecoMunicipioERP": {
+          "type": "string"
+        }
+      }
+    },
+    "Produto": {
+      "type": "object",
+      "required": [
+        "ProdutoCodigo",
+        "ProdutoFatorConversao"
+      ],
+      "properties": {
+        "ProdutoCodigo": {
+          "type": "integer"
+        },
+        "ProdutoCodigoSyngenta": {
+          "type": "string",
+          "description": "Código do produto no fornecedor."
+        },
+        "ProdutoDescricao": {
+          "type": "string",
+          "example": "Klerat Multi Inseticida"
+        },
+        "ProdutoFabricante": {
+          "type": "integer",
+          "description": "Código do fabricante.",
+          "example": "Syngenta"
+        },
+        "ProdutoGrupo": {
+          "type": "integer",
+          "description": "Código do grupo.",
+          "example": "Defensivo"
+        },
+        "ProdutoSubgrupo": {
+          "type": "integer",
+          "description": "Código do subgrupo.",
+          "example": "Inseticida"
+        },
+        "ProdutoFamilia": {
+          "type": "integer",
+          "description": "Código da familia.",
+          "example": "Klerat"
+        },
+        "ProdutoTipo": {
+          "type": "integer",
+          "description": "Código do tipo.",
+          "enum": [
+            "CRESCIMENTO",
+            "MASSA"
+          ]
+        },
+        "ProdutoFatorConversao": {
+          "type": "string",
+          "description": "Fator conversão embalagem para Kg/Lt."
+        }
+      }
+    },
+    "Fabricante": {
+      "type": "object",
+      "properties": {
+        "FabricanteCodigo": {
+          "type": "integer"
+        },
+        "FabricanteDescricao": {
+          "type": "string"
+        }
+      }
+    },
+    "Grupo": {
+      "type": "object",
+      "properties": {
+        "GrupoCodigo": {
+          "type": "integer"
+        },
+        "GrupoDescricao": {
+          "type": "string"
+        }
+      }
+    },
+    "Subgrupo": {
+      "type": "object",
+      "properties": {
+        "SubgrupoCodigo": {
+          "type": "integer"
+        },
+        "SubgrupoDescricao": {
+          "type": "string"
+        }
+      }
+    },
+    "Familia": {
+      "type": "object",
+      "properties": {
+        "FamiliaCodigo": {
+          "type": "integer"
+        },
+        "FamiliaDescricao": {
+          "type": "string"
+        }
+      }
+    },
+    "TipoProduto": {
+      "type": "object",
+      "properties": {
+        "TipoProdutoCodigo": {
+          "type": "integer"
+        },
+        "TipoProdutoDescricao": {
+          "type": "string"
+        }
+      }
+    },
+    "Safra": {
+      "type": "object",
+      "properties": {
+        "SafraCodigo": {
+          "type": "integer"
+        },
+        "SafraDescricao": {
+          "type": "string"
+        },
+        "SafraInicio": {
+          "type": "number",
+          "description": "Data de inicio da Safra."
+        },
+        "SafraFim": {
+          "type": "number",
+          "description": "Data de fim da Safra."
+        }
+      }
+    },
+    "Cultura": {
+      "type": "object",
+      "properties": {
+        "CulturaCodigo": {
+          "type": "integer"
+        },
+        "CulturaDescricao": {
+          "type": "string"
+        }
+      }
+    },
+    "Cliente": {
+      "type": "object",
+      "properties": {
+        "ClienteCodigo": {
+          "type": "integer"
+        },
+        "ClienteDescricao": {
+          "type": "string"
+        },
+        "ClienteCategoriaAtual": {
+          "type": "integer",
+          "description": "Código da categoria do cliente associada com a tabela de cadastro de categoria do cliente."
+        },
+        "ClientePrincipal": {
+          "type": "integer",
+          "description": "Código do cliente principal/pai."
+        },
+        "ClienteCPFCNPJ": {
+          "type": "string",
+          "description": "CPF ou CNPJ"
+        },
+        "ClienteRGInscEst": {
+          "type": "string",
+          "description": "RG ou Inscrição Estadual"
+        },
+        "ClienteCelular": {
+          "type": "string"
+        },
+        "ClienteTelefone": {
+          "type": "string"
+        },
+        "ClienteEmail": {
+          "type": "string"
+        },
+        "ClienteEndereco": {
+          "type": "string"
+        },
+        "ClienteEnderecoNumero": {
+          "type": "string"
+        },
+        "ClienteEnderecoBairro": {
+          "type": "string"
+        },
+        "ClienteEnderecoCEP": {
+          "type": "string"
+        },
+        "ClienteEnderecoComplemento": {
+          "type": "string"
+        },
+        "ClienteEnderecoMunicipioIBGE": {
+          "type": "string"
+        },
+        "ClienteEnderecoMunicipioERP": {
+          "type": "string",
+          "description": "Caso o cliente não possua municipio IBGE trazer neste campo o código que foi cadastrado."
+        }
+      },
+      "xml": {
+        "name": "Order"
+      }
+    },
+    "CategoriaCliente": {
+      "type": "object",
+      "properties": {
+        "CategoriaClienteCodigo": {
+          "type": "integer"
+        },
+        "CategoriaClienteDescricao": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "category"
+      }
+    },
+    "ClientePrincipal": {
+      "type": "object",
+      "properties": {
+        "ClientePrincipalCodigo": {
+          "type": "integer"
+        },
+        "ClientePrincipalDescricao": {
+          "type": "string"
+        },
+        "ClientePrincipalContasVencidas": {
+          "type": "number"
+        },
+        "ClientePrincipalContasVencer": {
+          "type": "number"
+        },
+        "ClientePrincipalLimiteCredito": {
+          "type": "number"
+        },
+        "ClientePrincipalGarantias": {
+          "type": "number"
+        }
+      }
+    },
+    "ClienteArea": {
+      "type": "object",
+      "properties": {
+        "AreaClienteCodigo": {
+          "type": "number",
+          "description": "Código do Cliente."
+        },
+        "AreaClienteFilial": {
+          "type": "number"
+        },
+        "AreaClienteAno": {
+          "type": "number"
+        },
+        "AreaClienteSafra": {
+          "type": "number"
+        },
+        "AreaClientePropriedade": {
+          "type": "number"
+        },
+        "AreaClienteCultura": {
+          "type": "number"
+        },
+        "AreaClienteAreaPlantada": {
+          "type": "number"
+        }
+      }
+    },
+    "Vendedor": {
+      "type": "object",
+      "properties": {
+        "VendedorCodigo": {
+          "type": "integer"
+        },
+        "VendedorDescricao": {
+          "type": "string"
+        },
+        "VendedorGerente": {
+          "type": "integer",
+          "description": "Código do gerente"
+        },
+        "VendedorCPF": {
+          "type": "string"
+        },
+        "VendedorRG": {
+          "type": "string"
+        },
+        "VendedorTelefone": {
+          "type": "string"
+        },
+        "VendedorCelular": {
+          "type": "string"
+        },
+        "VendedorEmail": {
+          "type": "string"
+        }
+      }
+    },
+    "Gerente": {
+      "type": "object",
+      "properties": {
+        "GerenteCodigo": {
+          "type": "integer"
+        },
+        "GerenteDescricao": {
+          "type": "string"
+        }
+      }
+    },
+    "Operacao": {
+      "type": "object",
+      "required": [
+        "OperacaoCFOP",
+        "OperacaoDescricao"
+      ],
+      "properties": {
+        "OperacaoCodigo": {
+          "type": "string",
+          "description": "Código da operação usado pelo ERP."
+        },
+        "OperacaoCFOP": {
+          "type": "integer"
+        },
+        "OperacaoDescricao": {
+          "type": "string",
+          "description": "Descrição da operação.",
+          "example": "Venda de mercadoria adquirida ou recebida de terceiros."
+        },
+        "OperacaoFuncao": {
+          "type": "string",
+          "description": "Função da Operação ** se é venda, compra etc."
+        },
+        "OperacaoMultiplicador": {
+          "type": "integer",
+          "description": "Multiplicador da Operação.",
+          "enum": [
+            "-1",
+            "1"
+          ]
+        },
+        "OperacaoTipo": {
+          "type": "string",
+          "description": "Tipo de operação."
+        }
+      }
+    },
+    "Compras": {
+      "type": "object",
+      "properties": {
+        "CompraDataEmissao": {
+          "type": "string"
+        },
+        "CompraDataRecebimento": {
+          "type": "string"
+        },
+        "CompraDataVencimento": {
+          "type": "string"
+        },
+        "CompraFilial": {
+          "type": "string",
+          "description": "Código da Filial"
+        },
+        "CompraOperacao": {
+          "type": "integer",
+          "description": "Código da operação que gerou esta movimentação com base na tabela de operação."
+        },
+        "CompraCFOP": {
+          "type": "integer"
+        },
+        "CompraNumeroNF": {
+          "type": "string"
+        },
+        "CompraSerieNF": {
+          "type": "string"
+        },
+        "CompraProduto": {
+          "type": "string"
+        },
+        "CompraValorItem": {
+          "type": "number",
+          "description": "Valor total líquido do produto na nota fiscal"
+        },
+        "CompraVolumeEmbalagem": {
+          "type": "number",
+          "description": "Quantidade do produto na nota fiscal."
+        },
+        "CompraVolumeItem": {
+          "type": "number",
+          "description": "Volume convertido em KG/L do produto na nota fiscal."
+        }
+      },
+      "xml": {
+        "name": "Compras"
+      }
+    },
+    "Pedido": {
+      "type": "object",
+      "required": [
+        "PedidoData",
+        "PedidoFilial",
+        "PedidoNumero",
+        "PedidoCliente",
+        "PedidoVendedor",
+        "PedidoProduto",
+        "PedidoValorUnitario",
+        "PedidoVolumeEmbalagem"
+      ],
+      "properties": {
+        "PedidoData": {
+          "type": "number"
+        },
+        "PedidoFilial": {
+          "type": "integer",
+          "description": "Código da Filial."
+        },
+        "PedidoSafra": {
+          "type": "integer",
+          "description": "Código da Safra."
+        },
+        "PedidoNumero": {
+          "type": "integer"
+        },
+        "PedidoItem": {
+          "type": "integer",
+          "description": "Sequencial do item."
+        },
+        "PedidoVendedor": {
+          "type": "integer",
+          "description": "Código do Vendedor."
+        },
+        "PedidoCliente": {
+          "type": "integer",
+          "description": "Código do Cliente."
+        },
+        "PedidoProduto": {
+          "type": "integer",
+          "description": "Código do Produto."
+        },
+        "PedidoCultura": {
+          "type": "integer",
+          "description": "Código da Cultura."
+        },
+        "PedidoValorUnitario": {
+          "type": "number",
+          "description": "Valor unitario do Produto na nota fiscal."
+        },
+        "PedidoValorItem": {
+          "type": "number",
+          "description": "Valor total dos produtos descontando os impostos, descontos e outras taxas. (Valor liquido)."
+        },
+        "PedidoVolumeEmbalagem": {
+          "type": "number",
+          "description": "Quantidade do produto vendida na NF."
+        },
+        "PedidoVolumeItem": {
+          "type": "number"
+        }
+      }
+    },
+    "Faturamento": {
+      "type": "object",
+      "properties": {
+        "FaturamentoData": {
+          "type": "number"
+        },
+        "FaturamentoDataVencimento": {
+          "type": "number"
+        },
+        "FaturamentoFilial": {
+          "type": "string",
+          "description": "Código da Filial."
+        },
+        "FaturamentoSafra": {
+          "type": "integer",
+          "description": "Código da Safra."
+        },
+        "FaturamentoCultura": {
+          "type": "string",
+          "description": "Código da cultura."
+        },
+        "FaturamentoNumeroNF": {
+          "type": "string"
+        },
+        "FaturamentoSerieNF": {
+          "type": "string"
+        },
+        "FaturamentoPedido": {
+          "type": "string"
+        },
+        "FaturamentoOperacao": {
+          "type": "string",
+          "description": "Código da operação que gerou esta movimentação com base na tabela de operação."
+        },
+        "FaturamentoCFOP": {
+          "type": "string"
+        },
+        "FaturamentoProduto": {
+          "type": "string"
+        },
+        "FaturamentoItem": {
+          "type": "string",
+          "description": "Código sequencial do produto, se não houver deixar em branco."
+        },
+        "FaturamentoCliente": {
+          "type": "string"
+        },
+        "FaturamentoVendedor": {
+          "type": "string"
+        },
+        "FaturamentoGerente": {
+          "type": "string",
+          "description": "Código do gerente referente ao vendedor."
+        },
+        "FaturamentoCancelado": {
+          "type": "integer",
+          "description": "Nota cancelada ?",
+          "enum": [
+            "Sim",
+            "Nao"
+          ]
+        },
+        "FaturamentoCodigo": {
+          "type": "string",
+          "description": "Sequencial da nota fiscal."
+        },
+        "FaturamentoCondicaoPagamento": {
+          "type": "string",
+          "enum": [
+            "A VISTA",
+            "A PRAZO",
+            "30 dias",
+            "..."
+          ]
+        },
+        "FaturamentoSituacao": {
+          "type": "string",
+          "description": "Situação da nota fiscal",
+          "enum": [
+            "Aberto",
+            "Fechado"
+          ]
+        },
+        "FaturamentoCustoUnitario": {
+          "type": "number",
+          "description": "Custo unitário do produto."
+        },
+        "FaturamentoVolumeEmbalagem": {
+          "type": "number",
+          "description": "Quantidade do produto vendida na NF."
+        },
+        "FaturamentoVolumeItem": {
+          "type": "number",
+          "description": ""
+        },
+        "FaturamentoValorBrutoItem": {
+          "type": "number",
+          "description": "Valor bruto referente ao total do produto na NF."
+        },
+        "FaturamentoValorItem": {
+          "type": "number",
+          "description": "Valor total do produto descontando os impostos, descontos e outras taxas. (Valor liquido)"
+        }
+      }
+    },
+    "ContaReceber": {
+      "type": "object",
+      "properties": {
+        "ContaReceberDataEmissao": {
+          "type": "number"
+        },
+        "ContaReceberDataVencimento": {
+          "type": "number"
+        },
+        "ContaReceberDataCarencia": {
+          "type": "number"
+        },
+        "ContaReceberDataPagamento": {
+          "type": "number"
+        },
+        "ContaReceberFilial": {
+          "type": "integer"
+        },
+        "ContaReceberNumeroDocumento": {
+          "type": "number"
+        },
+        "ContaReceberNumeroNF": {
+          "type": "number"
+        },
+        "ContaREceberSerieNF": {
+          "type": "number"
+        },
+        "ContaReceberCliente": {
+          "type": "integer"
+        },
+        "ContaReceberValorParcela": {
+          "type": "number"
+        },
+        "ContaReceberTaxaJuros": {
+          "type": "number"
+        },
+        "ContaReceberJuros": {
+          "type": "number"
+        },
+        "ContaReceberDescontoPontualidade": {
+          "type": "number"
+        },
+        "ContaReceberValorBaixa": {
+          "type": "number"
+        },
+        "ContaReceberSaldoAPagar": {
+          "type": "number"
+        },
+        "ContaReceberNumeroParcela": {
+          "type": "number"
+        },
+        "ContaReceberVendedor": {
+          "type": "integer"
+        },
+        "ContaReceberValorTotalDocumento": {
+          "type": "number"
+        },
+        "ContaReceberSituacaoDocumento": {
+          "type": "number"
+        },
+        "ContaReceberDataValorParcela": {
+          "type": "number"
+        },
+        "ContaReceberPortador": {
+          "type": "number"
+        },
+        "ContaReceberDesconto": {
+          "type": "number"
+        }
+      }
+    },
+    "Lote": {
+      "type": "object",
+      "properties": {
+        "LoteNumero": {
+          "type": "integer",
+          "description": "Número do Lote"
+        },
+        "LoteProduto": {
+          "type": "integer"
+        },
+        "LoteFilial": {
+          "type": "integer"
+        },
+        "LoteDataMovimentacao": {
+          "type": "number"
+        },
+        "LoteDataFabricacao": {
+          "type": "number"
+        },
+        "LoteDataAquisicao": {
+          "type": "number"
+        },
+        "LoteDataValidade": {
+          "type": "number"
+        },
+        "LoteNumeroNF": {
+          "type": "integer"
+        },
+        "LoteSerieNF": {
+          "type": "integer"
+        },
+        "LoteCFOP": {
+          "type": "integer"
+        },
+        "LoteVolume": {
+          "type": "number"
+        }
+      }
+    },
+    "Estoque": {
+      "type": "object",
+      "required": [
+        "name",
+        "photoUrls"
+      ],
+      "properties": {
+        "EstoqueData": {
+          "type": "number"
+        },
+        "EstoqueFilial": {
+          "type": "integer"
+        },
+        "EstoqueProduto": {
+          "type": "integer"
+        },
+        "EstoqueItem": {
+          "type": "integer",
+          "description": "Código sequencial do produto, se não houver deixar em branco."
+        },
+        "EstoqueLote": {
+          "type": "string"
+        },
+        "EstoqueOperacao": {
+          "type": "integer",
+          "description": "Código da operação que gerou esta movimentação com base na tabela de operação."
+        },
+        "EstoqueTransacao": {
+          "type": "string",
+          "description": "Diz respeito se a movimentacao é de entrada ou saída.",
+          "enum": [
+            "ENTRADA",
+            "SAIDA"
+          ]
+        }
+      },
+      "xml": {
+        "name": "Estoque"
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
