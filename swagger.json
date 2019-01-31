@@ -4,7 +4,6 @@
     "description": "Este exemplo serve de escopo para a criação das API para o extrator do Agroview. No final do documento temos as models(tabelas) a serem mapeadas com seus rescpectivos campos e retornadas em suas devidas URL.",
     "version": "1.0.0",
     "title": "Extrator Comercial Agroview",
-    "termsOfService": "http://swagger.io/terms/",
     "contact": {
       "email": "brid@bridsolucoes.com.br"
     },
@@ -999,8 +998,14 @@
           ]
         },
         "ProdutoFatorConversao": {
-          "type": "string",
-          "description": "Fator conversão embalagem para Kg/Lt."
+          "type": "number",
+          "description": "Fator conversão embalagem para Kg/Lt.",
+          "enum": [
+            0.25,
+            0.5,
+            1,
+            "..."
+          ]
         }
       }
     },
@@ -1070,11 +1075,13 @@
         },
         "SafraInicio": {
           "type": "number",
-          "description": "Data de inicio da Safra."
+          "description": "Data de inicio da Safra.",
+          "example": "05/01/2019"
         },
         "SafraFim": {
           "type": "number",
-          "description": "Data de fim da Safra."
+          "description": "Data de fim da Safra.",
+          "example": "04/30/2020"
         }
       }
     },
